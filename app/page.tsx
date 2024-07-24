@@ -49,7 +49,7 @@ export default function Home() {
 
       <h1>Inputs</h1>
       <div>
-        <Input />
+        <Input id="input">Label</Input>
       </div>
       <div className="flex items-center">
         <Check id="check">Label for check</Check>
