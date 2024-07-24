@@ -52,8 +52,7 @@ export default function Home() {
         <Input />
       </div>
       <div className="flex items-center">
-        <Check id="check"/>
-        <label htmlFor="check"> Check</label>
+        <Check id="check">Label for check</Check>
       </div>
     </main>
   );
