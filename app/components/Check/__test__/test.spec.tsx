@@ -3,12 +3,12 @@ import { Check } from "../Check";
 import { render, screen } from "@testing-library/react";
 
 describe("Check Component", () => {
-    render(<Check data-testid="test" id="test">label</Check>)
-    screen.debug()
     it("is rendered", () => {
+        render(<Check data-testid="test" id="test">label</Check>)
         expect(screen.getByTestId("test")).not.toBeNull()
     })
     it("it has same label", () => {
+        render(<Check data-testid="test" id="test">label</Check>)
         expect(screen.getByText("label")).not.toBeNull()
     })
 })

@@ -12,4 +12,6 @@ describe("Progress bar", ()=> {
     it("should have 20% progress bar", () =>{
         expect(screen.queryByRole("status-bar")?.style.width).toBe("20%")
     })
+
+    
 })
