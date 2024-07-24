@@ -3,7 +3,9 @@ import { Check } from "./components/Check";
 import { Input } from "./components/Input";
 import { Link } from "./components/Link";
 import { Pill } from "./components/Pill";
+import { Progress } from "./components/Progress";
 import { Separator } from "./components/Separator";
+import { Textarea } from "./components/Textarea";
 import { Buttons } from "./sections/Button";
 
 
@@ -49,11 +51,20 @@ export default function Home() {
 
       <h1>Inputs</h1>
       <div>
-        <Input />
+        <Input id="input">Label</Input>
       </div>
       <div className="flex items-center">
-        <Check id="check"/>
-        <label htmlFor="check"> Check</label>
+        <Check id="check">Label for check</Check>
+      </div>
+      <div>
+        <Textarea id="textarea">Label for textarea</Textarea>
+      </div>
+      <h1>Progress Bar</h1>
+      <div className="w-full">
+        <Progress max={100} value={25} min={0} status="error"></Progress>
+        <Progress max={100} value={50} min={0} status="warning"></Progress>
+        <Progress max={100} value={75} min={0} status="warning"></Progress>
+        <Progress max={100} value={100} min={0} status="success"></Progress>
       </div>
     </main>
   );

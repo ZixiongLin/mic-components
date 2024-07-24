@@ -3,8 +3,8 @@ import { Input } from "../Input";
 import {describe, it, expect, afterEach} from 'vitest';
 
 describe('Input',  () =>{
-    it("renders the input element", () => {
-        render(<Input id="test" data-testid="test"/>)
+    it("render the input element", () => {
+        render(<Input id="test" data-testid="test">Label</Input>)
         expect(screen.getByTestId("test")).not.toBeNull();
     })
 })
