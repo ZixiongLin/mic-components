@@ -2,8 +2,8 @@ import { Button } from "@/app/components/Button";
 
 export const Buttons = () => {
     return <>
-        <h1>Botones</h1>
-        <h2>Solidos</h2>
+        <h1>Buttons</h1>
+        <h2>Solids</h2>
         <div className="">
             <Button size="lg" variant="solid">
                 Continue
@@ -15,7 +15,7 @@ export const Buttons = () => {
                 Continue
             </Button>
         </div>
-        <h2>Bordeados</h2>
+        <h2>Bordereds</h2>
         <div className="">
             <Button size="lg" variant="bordered">
                 Continue

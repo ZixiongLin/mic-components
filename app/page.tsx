@@ -1,6 +1,8 @@
 import { Badge } from "./components/Badge";
-import { Link } from "./components/Link/Link";
-import { Pill } from "./components/Pill/Pill";
+import { Check } from "./components/Check";
+import { Input } from "./components/Input";
+import { Link } from "./components/Link";
+import { Pill } from "./components/Pill";
 import { Separator } from "./components/Separator";
 import { Buttons } from "./sections/Button";
 
@@ -44,6 +46,15 @@ export default function Home() {
 
       <h1>Links</h1>
       <Link href="#">Enlace</Link>
+
+      <h1>Inputs</h1>
+      <div>
+        <Input />
+      </div>
+      <div className="flex items-center">
+        <Check id="check"/>
+        <label htmlFor="check"> Check</label>
+      </div>
     </main>
   );
 }
