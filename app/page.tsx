@@ -4,6 +4,7 @@ import { Input } from "./components/Input";
 import { Link } from "./components/Link";
 import { Pill } from "./components/Pill";
 import { Separator } from "./components/Separator";
+import { Textarea } from "./components/Textarea";
 import { Buttons } from "./sections/Button";
 
 
@@ -53,6 +54,9 @@ export default function Home() {
       </div>
       <div className="flex items-center">
         <Check id="check">Label for check</Check>
+      </div>
+      <div>
+        <Textarea id="textarea">Label for textarea</Textarea>
       </div>
     </main>
   );
