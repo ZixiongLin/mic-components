@@ -1,4 +1,4 @@
-import MDXRemoteWrapper from "@/app/components/MDXRemoteWrapper";
+import MDXRemoteWrapper from "@/app/pages/MDXRemoteWrapper";
 import getSortedPostsData, {getPostBySlug} from "@/app/lib/posts";
 import { serialize } from "next-mdx-remote/serialize";
 
