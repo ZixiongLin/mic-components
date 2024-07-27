@@ -8,7 +8,7 @@ import { ScrollArea } from './components/ScrollArea'
 import { Separator } from './components/Separator'
 import { Textarea } from './components/Textarea'
 
-export default function Home () {
+export default function Home (): JSX.Element {
   return (
     <main className='flex min-h-screen flex-col items-center justify-between p-24 bg-[#ffffff]'>
       <h1>Badges</h1>

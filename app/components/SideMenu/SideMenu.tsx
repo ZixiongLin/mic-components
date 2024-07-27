@@ -2,7 +2,7 @@ import { ScrollArea } from '../ScrollArea'
 import { Badge } from '../Badge'
 import { Link } from '../Link'
 
-export const SideMenu = ({ ...props }) => {
+export const SideMenu = ({ ...props }): JSX.Element => {
   return (
     <ScrollArea className='w-1/7 h-full max-h-screen min-h-screen py-8' {...props}>
       <aside className='flex flex-col'>

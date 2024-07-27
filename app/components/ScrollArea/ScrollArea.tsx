@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-export const ScrollArea = ({ children, className, ...props }: { children: ReactNode, className: string }) => {
+export const ScrollArea = ({ children, className, ...props }: { children: ReactNode, className: string }): JSX.Element => {
   return (
     <div
       style={{

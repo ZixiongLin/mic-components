@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
-import { SideMenu } from '../components/SIdeMenu/SideMenu'
+import { SideMenu } from '../components/SideMenu/SideMenu'
 
-const Layout = ({ children }: { children: ReactNode }) => {
+const Layout = ({ children }: { children: ReactNode }): JSX.Element => {
   return (
     <div className='flex'>
       <SideMenu />

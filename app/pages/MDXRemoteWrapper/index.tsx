@@ -4,7 +4,7 @@ import { useMDXComponents } from '@/app/utils/mdx-components'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRemote, MDXRemoteProps } from 'next-mdx-remote'
 
-export default function MDXRemoteWrapper (props: MDXRemoteProps) {
+export default function MDXRemoteWrapper (props: MDXRemoteProps): JSX.Element {
   const components = useMDXComponents()
 
   return (

@@ -6,7 +6,7 @@ export const Progress = ({ max = 100, min = 0, value = 50, status, ...props }: {
   min?: number
   value?: number
   status: StatusProgress
-}) => {
+}): JSX.Element => {
   const width = (value / (max - min)) * 100
   return (
     <div className='w-full h-4 rounded border border-neutrals-400 bg-white m-4' {...props}>

@@ -1,6 +1,6 @@
-import { afterEach, describe, expect, it } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { Check } from '../Check'
-import { cleanup, render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 
 describe('Check Component', () => {
   it('is rendered', () => {

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-export const Input = ({ id, children, ...props }: { id: string, children: ReactNode }) => {
+export const Input = ({ id, children, ...props }: { id: string, children: ReactNode }): JSX.Element => {
   return (
     <div className='flex flex-col'>
       <label htmlFor={id} className='font-bold text-sm'>{children}</label>

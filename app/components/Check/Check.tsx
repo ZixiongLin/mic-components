@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-export const Check = ({ children, id, ...props }: { children: ReactNode, id: string }) => {
+export const Check = ({ children, id, ...props }: { children: ReactNode, id: string }): JSX.Element => {
   return (
     <>
       <input

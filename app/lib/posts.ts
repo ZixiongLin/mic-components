@@ -3,8 +3,21 @@ import path from 'path'
 import matter from 'gray-matter'
 
 const postsDirectory = path.join(process.cwd(), '/app/posts')
-
-export default function getSortedPostsData () {
+interface Post {
+  date: any
+  slug: string
+  title: string
+  data: {
+    [key: string]: any
+  }
+  content: string
+  excerpt?: string
+  orig: string | Buffer
+  language: string
+  matter: string
+  stringify: (lang: string) => string
+}
+export default function getSortedPostsData (): Post[] {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames.map((fileName) => {
@@ -35,7 +48,7 @@ export default function getSortedPostsData () {
   })
 }
 
-export function getPostBySlug ({ slug }: { slug: string }) {
+export function getPostBySlug ({ slug }: { slug: string }): Post {
   const posts = getSortedPostsData()
   const postFinded = posts.find((post) => post.slug === slug)
   if (postFinded != null) {

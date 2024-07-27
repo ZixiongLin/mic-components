@@ -1,8 +1,7 @@
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:1974364495.
 import React from 'react'
-import { cleanup, render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import { Link } from '@/app/components/Link'
-import { describe, it, expect, afterEach } from 'vitest'
+import { describe, it, expect } from 'vitest'
 
 describe('Link component', () => {
   it('renders if link exist', () => {

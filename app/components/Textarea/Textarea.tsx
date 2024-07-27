@@ -11,7 +11,7 @@ export const Textarea = ({
   children: ReactNode
   rows?: number
   cols?: number
-}) => {
+}): JSX.Element => {
   return (
     <div className='flex flex-col'>
       <label htmlFor={id} className='cursor-pointer font-bold text-sm'>{children}</label>
