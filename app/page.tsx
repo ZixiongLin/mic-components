@@ -23,10 +23,10 @@ export default function Home() {
       </div>
 
       <h1>Pills</h1>
-      <div>
+      <div className="flex">
         <Pill variant="success" value={0}/>
         <Pill variant="removed" value={10}/>
-        <Pill variant="progress" value={15}/>
+        <Pill variant="progress" value={1000}/>
         <Pill variant="trial" value={5}/>
         <Pill variant="moved" value={20}/>
         <Pill variant="beta" value={2}/>
