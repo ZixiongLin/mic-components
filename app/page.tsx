@@ -7,13 +7,11 @@ import { Progress } from "./components/Progress";
 import { ScrollArea } from "./components/ScrollArea";
 import { Separator } from "./components/Separator";
 import { Textarea } from "./components/Textarea";
-import { Buttons } from "./sections/Button";
 
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Buttons />
       <h1>Badges</h1>
       <div>
         <Badge variant="success">Success</Badge>

@@ -39,5 +39,6 @@
   },
   "overrides": {
     "glob": "^10"
-  }
+  },
+  "type": "module"
 }

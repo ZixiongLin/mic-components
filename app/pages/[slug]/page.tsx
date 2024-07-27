@@ -1,6 +1,8 @@
 import MDXRemoteWrapper from "@/app/pages/MDXRemoteWrapper";
 import getSortedPostsData, {getPostBySlug} from "@/app/lib/posts";
 import { serialize } from "next-mdx-remote/serialize";
+import { useMDXComponents } from "@/app/utils/mdx-components";
+import { MDXProvider } from '@mdx-js/react'
 
 
 const Page = async (
@@ -14,9 +16,10 @@ const Page = async (
         title
     } = getPostBySlug({slug});
     let mdxSource =await serialize(content)
+    const components = useMDXComponents();
 
     return <div>
-        <MDXRemoteWrapper {...mdxSource} />
+            <MDXRemoteWrapper {...mdxSource}  />
     </div>
 }
 
