@@ -1,6 +1,6 @@
-import { cleanup, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import {Badge} from '@/app/components/Badge';
-import {describe, it, expect, afterEach} from 'vitest';
+import {describe, it, expect } from 'vitest';
 
 describe('Badge', () => {
     it('renders a badge with default variant', () => {
