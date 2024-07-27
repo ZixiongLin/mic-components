@@ -3,9 +3,6 @@ import {Badge} from '@/app/components/Badge';
 import {describe, it, expect, afterEach} from 'vitest';
 
 describe('Badge', () => {
-    afterEach(() => {
-        cleanup();
-    });
     it('renders a badge with default variant', () => {
         render(<Badge>Badge</Badge>);
         expect(screen.getByText('Badge').classList).toContain('bg-success-100');

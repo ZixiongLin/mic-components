@@ -3,7 +3,6 @@ import { afterEach, describe, expect, it } from "vitest";
 import { Progress } from "../Progress";
 
 describe("Progress bar", ()=> {
-    afterEach(() =>cleanup())
     it("render", () => {
         render(<Progress data-testid="test" min={10} max={110} value={20}
             status="warning"

@@ -4,9 +4,6 @@ import {Pill} from '@/app/components/Pill';
 import { afterEach, describe, expect, it } from 'vitest';
 
 describe('Pill', () => {
-    afterEach(() => {
-        cleanup();
-    });
     it('renders Pill with default variant', () => {
         render(<Pill value={0}/>);
         expect(screen.getByText('0')).not.toBeNull();

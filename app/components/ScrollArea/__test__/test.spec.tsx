@@ -3,8 +3,6 @@ import { afterEach, describe, it } from "vitest";
 import { ScrollArea } from "../ScrollArea";
 
 describe( "Scroll area", () => {
-    afterEach( () => cleanup());
-
     it("render component", () => {
         render(<ScrollArea
             className="w-11"

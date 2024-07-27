@@ -5,10 +5,6 @@ import { Link } from '@/app/components/Link';
 import { describe, it,expect, afterEach } from 'vitest';
 
 describe('Link component', () => {
-  afterEach(() => {
-      cleanup();
-  });
-
   it('renders if link exist', () => {
     render(<Link href="https://www.example.com">Example Link</Link>);
     const linkElement = screen.getByRole('link',{name:'Example Link'});
