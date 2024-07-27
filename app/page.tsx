@@ -4,15 +4,14 @@ import { Input } from "./components/Input";
 import { Link } from "./components/Link";
 import { Pill } from "./components/Pill";
 import { Progress } from "./components/Progress";
+import { ScrollArea } from "./components/ScrollArea";
 import { Separator } from "./components/Separator";
 import { Textarea } from "./components/Textarea";
-import { Buttons } from "./sections/Button";
 
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Buttons />
       <h1>Badges</h1>
       <div>
         <Badge variant="success">Success</Badge>
@@ -66,6 +65,17 @@ export default function Home() {
         <Progress max={100} value={75} min={0} status="warning"></Progress>
         <Progress max={100} value={100} min={0} status="success"></Progress>
       </div>
+
+      <ScrollArea className="flex flex-col w-1/2 max-h-24 overflow-auto ">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
+      </ScrollArea>
     </main>
   );
 }
