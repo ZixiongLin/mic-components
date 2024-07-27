@@ -1,1 +1,1 @@
-export type StatusProgress = "warning" | "error" | "success"
+export type StatusProgress = 'warning' | 'error' | 'success'

@@ -1,15 +1,15 @@
-"use client";
+'use client'
 
-import { useMDXComponents } from "@/app/utils/mdx-components";
-import { MDXProvider } from "@mdx-js/react";
-import { MDXRemote, MDXRemoteProps } from "next-mdx-remote";
+import { useMDXComponents } from '@/app/utils/mdx-components'
+import { MDXProvider } from '@mdx-js/react'
+import { MDXRemote, MDXRemoteProps } from 'next-mdx-remote'
 
-export default function MDXRemoteWrapper(props: MDXRemoteProps) {
-    const components = useMDXComponents();
+export default function MDXRemoteWrapper (props: MDXRemoteProps) {
+  const components = useMDXComponents()
 
-    return <MDXProvider components={components}>
-            <MDXRemote {...props} />
+  return (
+    <MDXProvider components={components}>
+      <MDXRemote {...props} />
     </MDXProvider>
-
-
+  )
 }

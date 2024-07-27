@@ -1,1 +1,1 @@
-export type VARIANT = "solid" | "bordered" | "light" | "flat" | "ghost"
+export type VARIANT = 'solid' | 'bordered' | 'light' | 'flat' | 'ghost'
