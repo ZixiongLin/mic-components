@@ -8,7 +8,7 @@ export const Link = ({
     href: string,
     children:ReactNode
 }) => {
-    return <LinkNext href={href} role="link" className="text-primary-400 hover:text-primary-800 px-8 py-4">
+    return <LinkNext href={href} role="link" className="text-primary-800 hover:text-primary-800 px-8 py-4">
         {children ?? "Enlace"}
     </LinkNext>
 }

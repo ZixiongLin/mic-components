@@ -5,8 +5,11 @@ import { ReactNode } from "react";
 
 const Layout = ({children}:{children:ReactNode}) => {
     return <div className="flex">
-        <ScrollArea className="w-3/12 h-full max-h-screen min-h-screen">
+        <ScrollArea className="w-3/12 h-full max-h-screen min-h-screen py-8">
             <div className="flex flex-col">
+                <h1 className="text-lg px-4 font-bold">
+                    Components
+                </h1>
                 <Link href="#">
                     Badge <Badge variant="success">new</Badge>
                 </Link>
