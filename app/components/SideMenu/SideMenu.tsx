@@ -24,7 +24,7 @@ export const SideMenu = ({ ...props }): JSX.Element => {
         <Link href='#'>
           Link <Badge variant='success'>new</Badge>
         </Link>
-        <Link href='#'>
+        <Link href='/pages/pill'>
           Pill <Badge variant='success'>new</Badge>
         </Link>
         <Link href='#'>

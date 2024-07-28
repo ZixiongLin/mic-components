@@ -6,31 +6,12 @@ import { Pill } from './components/Pill'
 import { Progress } from './components/Progress'
 import { ScrollArea } from './components/ScrollArea'
 import { Separator } from './components/Separator'
+import { Slider } from './components/Slider'
 import { Textarea } from './components/Textarea'
 
 export default function Home (): JSX.Element {
   return (
     <main className='flex min-h-screen flex-col items-center justify-between p-24 bg-[#ffffff]'>
-      <h1>Badges</h1>
-      <div>
-        <Badge variant='success'>Success</Badge>
-        <Badge variant='removed'>Removed</Badge>
-        <Badge variant='progress'>In Progress</Badge>
-        <Badge variant='trial'>Trial</Badge>
-        <Badge variant='moved'>Moved</Badge>
-        <Badge variant='beta'>Beta</Badge>
-      </div>
-
-      <h1>Pills</h1>
-      <div className='flex'>
-        <Pill variant='success' value={0} />
-        <Pill variant='removed' value={10} />
-        <Pill variant='progress' value={1000} />
-        <Pill variant='trial' value={5} />
-        <Pill variant='moved' value={20} />
-        <Pill variant='beta' value={2} />
-      </div>
-
       <h1>Separator</h1>
       <div>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus sit, aperiam modi deleniti sunt a exercitationem eaque quaerat laudantium error quam
@@ -75,6 +56,9 @@ export default function Home (): JSX.Element {
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
       </ScrollArea>
+
+      <h1>Slider</h1>
+      <Slider />
     </main>
   )
 }
