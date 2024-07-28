@@ -1,11 +1,10 @@
 import { ReactNode } from 'react'
 import { cvaButton } from './cva'
-import { SIZES } from './sizes'
-import { VARIANT } from './variant'
+import { ButtonProps } from './ButtonProps'
 
-export const Button = ({ size, variant, children }: { size?: SIZES, variant?: VARIANT, children: ReactNode }): JSX.Element => {
+export const Button: React.FC<ButtonProps> = ({ size, variant, children, role, onClick}) => {
   return (
-    <button className={cvaButton({ size, variant })}>
+    <button className={cvaButton({ size, variant })} role={role} onClick={onClick}>
       {children}
     </button>
   )

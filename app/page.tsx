@@ -7,6 +7,7 @@ import { Progress } from './components/Progress'
 import { ScrollArea } from './components/ScrollArea'
 import { Separator } from './components/Separator'
 import { Slider } from './components/Slider'
+import { Snippet } from './components/Snippet/Snippet'
 import { Textarea } from './components/Textarea'
 
 export default function Home (): JSX.Element {
@@ -59,6 +60,9 @@ export default function Home (): JSX.Element {
 
       <h1>Slider</h1>
       <Slider />
+
+      <h1>Snippet</h1>
+      <Snippet>npm i @chinese/button</Snippet>
     </main>
   )
 }
