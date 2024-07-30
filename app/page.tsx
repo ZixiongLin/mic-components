@@ -1,8 +1,7 @@
-import { Badge } from './components/Badge'
+import { Avatar } from './components/Avatar'
 import { Check } from './components/Check'
 import { Input } from './components/Input'
 import { Link } from './components/Link'
-import { Pill } from './components/Pill'
 import { Progress } from './components/Progress'
 import { ScrollArea } from './components/ScrollArea'
 import { Separator } from './components/Separator'
@@ -13,6 +12,8 @@ import { Textarea } from './components/Textarea'
 export default function Home (): JSX.Element {
   return (
     <main className='flex min-h-screen flex-col items-center justify-between p-24 bg-[#ffffff]'>
+      <h1>Avatar</h1>
+      <Avatar src='https://zlinyan.es/_astro/me.C7wE-_Fh_1HxhPl.webp' />
       <h1>Separator</h1>
       <div>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus sit, aperiam modi deleniti sunt a exercitationem eaque quaerat laudantium error quam
