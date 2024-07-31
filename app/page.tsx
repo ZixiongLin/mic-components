@@ -1,81 +1,79 @@
-import { Badge } from "./components/Badge";
-import { Check } from "./components/Check";
-import { Input } from "./components/Input";
-import { Link } from "./components/Link";
-import { Pill } from "./components/Pill";
-import { Progress } from "./components/Progress";
-import { ScrollArea } from "./components/ScrollArea";
-import { Separator } from "./components/Separator";
-import { Textarea } from "./components/Textarea";
+import { Alert } from './components/Alert'
+import { Avatar } from './components/Avatar'
+import { Check } from './components/Check'
+import { ColorPicker } from './components/ColorPicker'
+import { Input } from './components/Input'
+import { Link } from './components/Link'
+import { Progress } from './components/Progress'
+import { ScrollArea } from './components/ScrollArea'
+import { Separator } from './components/Separator'
+import { Slider } from './components/Slider'
+import { Snippet } from './components/Snippet/Snippet'
+import { Textarea } from './components/Textarea'
 
-
-export default function Home() {
+export default function Home (): JSX.Element {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Badges</h1>
-      <div>
-        <Badge variant="success">Success</Badge>
-        <Badge variant="removed">Removed</Badge>
-        <Badge variant="progress">In Progress</Badge>
-        <Badge variant="trial">Trial</Badge>
-        <Badge variant="moved">Moved</Badge>
-        <Badge variant="beta">Beta</Badge>
-      </div>
+    <main className='flex min-h-screen flex-col items-center justify-between p-24 bg-[#ffffff]'>
+      <h1>Alert</h1>
+      <Alert subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit' title='Hey you gave a notification'></Alert>
+      <Alert variant="error" subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit' title='Hey you gave a notification'></Alert>
+      <Alert variant="success" subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit' title='Hey you gave a notification'></Alert>
 
-      <h1>Pills</h1>
-      <div>
-        <Pill variant="success" value={0}/>
-        <Pill variant="removed" value={10}/>
-        <Pill variant="progress" value={15}/>
-        <Pill variant="trial" value={5}/>
-        <Pill variant="moved" value={20}/>
-        <Pill variant="beta" value={2}/>
-      </div>
-
+      <h1>Avatar</h1>
+      <Avatar src='https://zlinyan.es/_astro/me.C7wE-_Fh_1HxhPl.webp' />
+      
+      <h1>Color Picker</h1>
+      <ColorPicker id='color-picker'>Ejemplo de Color Picker</ColorPicker>
       <h1>Separator</h1>
       <div>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus sit, aperiam modi deleniti sunt a exercitationem eaque quaerat laudantium error quam
-        <Separator/>
+        <Separator />
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium iste tempore quidem ipsum veniam fugiat eum provident corrupti sapiente dolore
       </div>
 
-      <div className="flex">
+      <div className='flex'>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus sit, aperiam modi deleniti sunt a exercitationem eaque quaerat laudantium error quam
-        <Separator orientation="vertical"/>
+        <Separator orientation='vertical' />
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium iste tempore quidem ipsum veniam fugiat eum provident corrupti sapiente dolore
       </div>
 
       <h1>Links</h1>
-      <Link href="#">Enlace</Link>
+      <Link href='#'>Enlace</Link>
 
       <h1>Inputs</h1>
       <div>
-        <Input id="input">Label</Input>
+        <Input id='input'>Label</Input>
       </div>
-      <div className="flex items-center">
-        <Check id="check">Label for check</Check>
+      <div className='flex items-center'>
+        <Check id='check'>Label for check</Check>
       </div>
       <div>
-        <Textarea id="textarea">Label for textarea</Textarea>
+        <Textarea id='textarea'>Label for textarea</Textarea>
       </div>
       <h1>Progress Bar</h1>
-      <div className="w-full">
-        <Progress max={100} value={25} min={0} status="error"></Progress>
-        <Progress max={100} value={50} min={0} status="warning"></Progress>
-        <Progress max={100} value={75} min={0} status="warning"></Progress>
-        <Progress max={100} value={100} min={0} status="success"></Progress>
+      <div className='w-full'>
+        <Progress max={100} value={25} min={0} status='error' />
+        <Progress max={100} value={50} min={0} status='warning' />
+        <Progress max={100} value={75} min={0} status='warning' />
+        <Progress max={100} value={100} min={0} status='success' />
       </div>
 
-      <ScrollArea className="flex flex-col w-1/2 max-h-24 overflow-auto ">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
+      <ScrollArea className='flex flex-col w-1/2 max-h-24 overflow-auto '>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
       </ScrollArea>
+
+      <h1>Slider</h1>
+      <Slider />
+
+      <h1>Snippet</h1>
+      <Snippet>npm i @chinese/button</Snippet>
     </main>
-  );
+  )
 }

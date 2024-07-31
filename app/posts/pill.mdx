@@ -1,0 +1,21 @@
+# Pill
+This page has some examples Pill component usage
+
+<div className='flex'>
+    <Pill variant='success' value={0} />
+    <Pill variant='removed' value={10} />
+    <Pill variant='progress' value={1000} />
+    <Pill variant='trial' value={5} />
+    <Pill variant='moved' value={20} />
+    <Pill variant='beta' value={2} />
+</div>
+
+## Default values
+
+Pills only show values less than 100, if value is greather or equals than 100, value is showed as **+99**
+<div className='flex'>
+    <Pill variant='progress' value={1000} />
+
+</div>
+
+**Note:** for text use Badge Component
