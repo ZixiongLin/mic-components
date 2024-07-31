@@ -6,11 +6,13 @@ export default defineConfig({
   plugins: [react()],
   test: {
     environment: 'happy-dom',
-    globals:true
+    globals:true,
+    setupFiles: ["/app/setup-test.ts"]
   },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './')
     },
   },
+  
 })
