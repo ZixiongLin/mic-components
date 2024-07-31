@@ -1,4 +1,5 @@
 import { Alert } from './components/Alert'
+import { Autocomplete } from './components/Autocomplete/Autocomplete'
 import { Avatar } from './components/Avatar'
 import { Check } from './components/Check'
 import { ColorPicker } from './components/ColorPicker'
@@ -21,7 +22,20 @@ export default function Home (): JSX.Element {
 
       <h1>Avatar</h1>
       <Avatar src='https://zlinyan.es/_astro/me.C7wE-_Fh_1HxhPl.webp' />
-      
+      <h1>Autocomplete</h1>
+      <Autocomplete
+        id='autocomplete'
+        label='Autocomplete example'
+        listName='datalist'
+        options={[
+          "spain",
+          "china",
+          "canary islands",
+          "portugal",
+          "usa"
+        ]}
+      />
+
       <h1>Color Picker</h1>
       <ColorPicker id='color-picker'>Ejemplo de Color Picker</ColorPicker>
       <h1>Separator</h1>
