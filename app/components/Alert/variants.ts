@@ -1,0 +1,1 @@
+export type VARIANT = 'default' | 'error' | 'success'

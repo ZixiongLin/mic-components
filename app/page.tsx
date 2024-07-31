@@ -1,3 +1,4 @@
+import { Alert } from './components/Alert'
 import { Avatar } from './components/Avatar'
 import { Check } from './components/Check'
 import { ColorPicker } from './components/ColorPicker'
@@ -13,6 +14,11 @@ import { Textarea } from './components/Textarea'
 export default function Home (): JSX.Element {
   return (
     <main className='flex min-h-screen flex-col items-center justify-between p-24 bg-[#ffffff]'>
+      <h1>Alert</h1>
+      <Alert subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit' title='Hey you gave a notification'></Alert>
+      <Alert variant="error" subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit' title='Hey you gave a notification'></Alert>
+      <Alert variant="success" subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit' title='Hey you gave a notification'></Alert>
+
       <h1>Avatar</h1>
       <Avatar src='https://zlinyan.es/_astro/me.C7wE-_Fh_1HxhPl.webp' />
       
