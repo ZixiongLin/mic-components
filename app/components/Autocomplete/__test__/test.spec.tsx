@@ -21,10 +21,10 @@ describe("Autocomplete", () => {
         ></Autocomplete>)
 
         const component = screen.getByTestId("autocomplete");
-        const datalist = component.querySelector("datalist")!;
+        const datalist = screen.getByRole("listbox")!;
         expect(component.querySelector("label")).not.toBeNull()
         expect(component.querySelector("input")).not.toBeNull()
-        expect(datalist.children.length).toEqual(4)
+        expect(datalist.childElementCount).toEqual(4)
 
     })
 
