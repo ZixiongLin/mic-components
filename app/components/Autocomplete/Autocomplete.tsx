@@ -19,7 +19,7 @@ export const Autocomplete = ({
             autoComplete="off"
             list={listName}
         />
-        <div id={listName} role="listbox">
+        <datalist id={listName} title="data-list">
             {options.filter(opt => opt.includes(text))
                 .map((opt,index) => {
                     return <option value={opt} key={index}
@@ -27,6 +27,6 @@ export const Autocomplete = ({
                     >{opt}</option>
                 })
             }
-        </div>
+        </datalist>
     </div>
 }
