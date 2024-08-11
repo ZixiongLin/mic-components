@@ -9,6 +9,7 @@ import { Link } from './components/Link'
 import { Pagination } from './components/Pagination'
 import { Progress } from './components/Progress'
 import { ScrollArea } from './components/ScrollArea'
+import { Select, SelectOption } from './components/Select'
 import { Separator } from './components/Separator'
 import { Slider } from './components/Slider'
 import { Snippet } from './components/Snippet/Snippet'
@@ -84,7 +85,13 @@ export default function Home (): JSX.Element {
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
       </ScrollArea>
-
+      
+      <h1>Select</h1>
+      <Select name="" id="select" label='example'>
+        <SelectOption value="1">1</SelectOption>
+        <SelectOption value="2">2</SelectOption>
+        <SelectOption value="3">3</SelectOption>
+      </Select>
       <h1>Slider</h1>
       <Slider />
 

@@ -5,6 +5,6 @@ import { VARIANT } from "./variant";
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     size?: SIZES, 
     variant?: VARIANT, 
-    children: ReactNode,
+    children?: ReactNode,
 }
   

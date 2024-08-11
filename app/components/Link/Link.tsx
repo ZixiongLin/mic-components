@@ -8,9 +8,6 @@ export const Link = ({
   variant="default",
   active = false
 }: LinkProps): JSX.Element => {
-  if(active){
-    console.log(cvaLink({variant,active}))
-  }
   return (
     <LinkNext href={href} role='link' className={cvaLink({variant,active})}>
       {children}
