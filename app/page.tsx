@@ -1,6 +1,7 @@
 import { Alert } from './components/Alert'
 import { Autocomplete } from './components/Autocomplete/Autocomplete'
 import { Avatar } from './components/Avatar'
+import { Button } from './components/Button'
 import { Check } from './components/Check'
 import { ColorPicker } from './components/ColorPicker'
 import { FloatButton } from './components/FloatButton'
@@ -14,6 +15,7 @@ import { Separator } from './components/Separator'
 import { Slider } from './components/Slider'
 import { Snippet } from './components/Snippet/Snippet'
 import { Textarea } from './components/Textarea'
+import { Tooltip } from './components/Tooltip/Tooltip'
 
 export default function Home (): JSX.Element {
   return (
@@ -118,6 +120,11 @@ export default function Home (): JSX.Element {
         </Pagination>
       </div>
 
+      <Tooltip id='tooltip' aria-labelledby='notification-label' label='label'>
+        <Button>
+          button with Tooltip
+        </Button>
+      </Tooltip>
     </main>
   )
 }
