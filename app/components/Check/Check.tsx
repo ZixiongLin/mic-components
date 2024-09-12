@@ -5,11 +5,11 @@ export const Check = ({ children, id, ...props }: { children: ReactNode, id: str
     <>
       <input
         type='checkbox'
-        className='w-4 h-4 rounded-md focus:ring-primary-900 focus:ring-1 focus:ring-offset-2 m-2'
+        className='w-4 h-4 rounded-md focus:ring-primary-900 focus:ring-1 focus:ring-offset-2 m-2 cursor-pointer'
         id={id}
         {...props}
       />
-      <label htmlFor={id}>{children}</label>
+      <label htmlFor={id} className='cursor-pointer'>{children}</label>
     </>
   )
 }

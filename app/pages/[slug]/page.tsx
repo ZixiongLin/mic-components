@@ -14,7 +14,7 @@ const Page = async (
   const mdxSource = await serialize(content)
 
   return (
-    <div>
+    <div className=' w-auto h-full'>
       <MDXRemoteWrapper {...mdxSource} />
     </div>
   )

@@ -12,7 +12,7 @@ export const Autocomplete = ({
 
     const [text, useText] = useState("");
     return <div {...props} className="flex gap-2 items-center">
-        <label htmlFor={id} className="font-bold text-sm">{label}</label>
+        <label htmlFor={id} className="font-bold text-sm cursor-pointer">{label}</label>
         <input type="text" id={id}
             className="px-4 py-2 border rounded-md"
             placeholder="search one"
