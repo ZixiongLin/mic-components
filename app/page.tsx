@@ -14,6 +14,7 @@ import { Select, SelectOption } from './components/Select'
 import { Separator } from './components/Separator'
 import { Slider } from './components/Slider'
 import { Snippet } from './components/Snippet/Snippet'
+import { Switch } from './components/Switch'
 import { Table, TableBody, TableHead } from './components/Table'
 import { Textarea } from './components/Textarea'
 import { Tooltip } from './components/Tooltip/Tooltip'
@@ -135,19 +136,6 @@ export default function Home (): JSX.Element {
         </svg>
       </FloatButton>
 
-      <h1>Pagination</h1>
-      <div className='w-1/3'>
-        <Pagination
-          prevHref='#'
-          nextHref='#'
-        >
-            <Link href="#" variant='ghost'>1</Link>
-            <Link href="#" variant='ghost' active={true}>2</Link>
-            <Link href="#" variant='ghost'>3</Link>
-            <Link href="#" variant='ghost'>4</Link>
-        </Pagination>
-      </div>
-
       <Tooltip id='tooltip' aria-labelledby='notification-label' label='label'>
         <Button>
           button with Tooltip
@@ -183,6 +171,19 @@ export default function Home (): JSX.Element {
                 }}
             />
         </Table>
+        <h1>Pagination</h1>
+        <div className='w-1/3'>
+          <Pagination
+            prevHref='#'
+            nextHref='#'
+          >
+              <Link href="#" variant='ghost'>1</Link>
+              <Link href="#" variant='ghost' active={true}>2</Link>
+              <Link href="#" variant='ghost'>3</Link>
+              <Link href="#" variant='ghost'>4</Link>
+          </Pagination>
+        </div>
+        <Switch />
     </main>
   )
 }
