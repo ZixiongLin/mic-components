@@ -1,6 +1,7 @@
 import { Alert } from './components/Alert'
 import { Autocomplete } from './components/Autocomplete/Autocomplete'
 import { Avatar } from './components/Avatar'
+import { Button } from './components/Button'
 import { Check } from './components/Check'
 import { ColorPicker } from './components/ColorPicker'
 import { FloatButton } from './components/FloatButton'
@@ -9,12 +10,43 @@ import { Link } from './components/Link'
 import { Pagination } from './components/Pagination'
 import { Progress } from './components/Progress'
 import { ScrollArea } from './components/ScrollArea'
+import { Select, SelectOption } from './components/Select'
 import { Separator } from './components/Separator'
 import { Slider } from './components/Slider'
 import { Snippet } from './components/Snippet/Snippet'
+import { Switch } from './components/Switch'
+import { Table, TableBody, TableHead } from './components/Table'
 import { Textarea } from './components/Textarea'
+import { Tooltip } from './components/Tooltip/Tooltip'
 
 export default function Home (): JSX.Element {
+  const data = [
+    {
+      "id": 1,
+      "name": "Juan Pérez",
+      "age": 28,
+      "email": "juan.perez@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Ana García",
+      "age": 34,
+      "email": "ana.garcia@example.com"
+    },
+    {
+      "id": 3,
+      "name": "Carlos López",
+      "age": 25,
+      "email": "carlos.lopez@example.com"
+    },
+    {
+      "id": 4,
+      "name": "Lucía Fernández",
+      "age": 30,
+      "email": "lucia.fernandez@example.com"
+    }
+  ]
+
   return (
     <main className='flex min-h-screen flex-col items-center justify-between p-24 bg-[#ffffff]'>
       <h1>Alert</h1>
@@ -84,7 +116,13 @@ export default function Home (): JSX.Element {
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
       </ScrollArea>
-
+      
+      <h1>Select</h1>
+      <Select name="" id="select" label='example'>
+        <SelectOption value="1">1</SelectOption>
+        <SelectOption value="2">2</SelectOption>
+        <SelectOption value="3">3</SelectOption>
+      </Select>
       <h1>Slider</h1>
       <Slider />
 
@@ -98,19 +136,54 @@ export default function Home (): JSX.Element {
         </svg>
       </FloatButton>
 
-      <h1>Pagination</h1>
-      <div className='w-1/3'>
-        <Pagination
-          prevHref='#'
-          nextHref='#'
-        >
-            <Link href="#" variant='ghost'>1</Link>
-            <Link href="#" variant='ghost' active={true}>2</Link>
-            <Link href="#" variant='ghost'>3</Link>
-            <Link href="#" variant='ghost'>4</Link>
-        </Pagination>
-      </div>
+      <Tooltip id='tooltip' aria-labelledby='notification-label' label='label'>
+        <Button>
+          button with Tooltip
+        </Button>
+      </Tooltip>
 
+      <Table data-testid = "table">
+            <TableHead
+                data-testid = "t-head"
+                each={Object.keys(data[0])}
+                render={(item,index) => {
+                    return <th 
+                      key={index}
+                      scope="col" className="px-6 py-3"
+                    >{item}</th>
+                }}
+            />
+            <TableBody
+                data-testid = "t-body"
+                each={data}
+                row={(item,index) => {
+                    return <tr key={index}
+                      className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                    >
+                      {
+                        Object.values(item as {id:any,name:any,age:any,email:any} ).map((v,i) => {
+                          return <td className="px-6 py-4" key={i}>
+                              {v}
+                            </td>
+                        })
+                      }
+                    </tr>
+                }}
+            />
+        </Table>
+        <h1>Pagination</h1>
+        <div className='w-1/3'>
+          <Pagination
+            prevHref='#'
+            nextHref='#'
+          >
+              <Link href="#" variant='ghost'>1</Link>
+              <Link href="#" variant='ghost' active={true}>2</Link>
+              <Link href="#" variant='ghost'>3</Link>
+              <Link href="#" variant='ghost'>4</Link>
+          </Pagination>
+        </div>
+        <Switch />
     </main>
   )
 }
