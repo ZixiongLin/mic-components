@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest",
-    "ts:lint":"ts-standard --fix"
+    "ts:lint": "ts-standard --fix"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.0.1",
