@@ -3,13 +3,14 @@ import { LinkProps } from './LinkProps'
 import { cvaLink } from './cva'
 
 export const Link = ({
-  href = 'https://zlinyan.es',
+  href = '#',
   children,
   variant="default",
-  active = false
+  active = false,
+  ...props
 }: LinkProps): JSX.Element => {
   return (
-    <LinkNext href={href} role='link' className={cvaLink({variant,active})}>
+    <LinkNext href={href} role='link' className={cvaLink({variant,active})} {...props}>
       {children}
     </LinkNext>
   )
