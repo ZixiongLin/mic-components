@@ -4,7 +4,7 @@ import { Link } from '../Link'
 
 export const SideMenu = ({ ...props }): JSX.Element => {
   return (
-    <ScrollArea className='w-1/7 h-full max-h-screen min-h-screen py-8' {...props}>
+    <ScrollArea className='w-1/7 h-full max-h-screen min-h-screen py-8 scrollbar-thumb-white scrollbar-track-transparent scrollbar-thin scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-w-2' {...props}>
       <aside className='flex flex-col'>
         <h1 className='text-lg px-4 font-bold'>
           Components
