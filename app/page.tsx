@@ -1,189 +1,65 @@
-import { Alert } from './components/Alert'
-import { Autocomplete } from './components/Autocomplete/Autocomplete'
-import { Avatar } from './components/Avatar'
-import { Button } from './components/Button'
-import { Check } from './components/Check'
-import { ColorPicker } from './components/ColorPicker'
-import { FloatButton } from './components/FloatButton'
-import { Input } from './components/Input'
-import { Link } from './components/Link'
-import { Pagination } from './components/Pagination'
-import { Progress } from './components/Progress'
-import { ScrollArea } from './components/ScrollArea'
-import { Select, SelectOption } from './components/Select'
-import { Separator } from './components/Separator'
-import { Slider } from './components/Slider'
-import { Snippet } from './components/Snippet/Snippet'
-import { Switch } from './components/Switch'
-import { Table, TableBody, TableHead } from './components/Table'
-import { Textarea } from './components/Textarea'
-import { Tooltip } from './components/Tooltip/Tooltip'
+import Link from 'next/link'
+import { Navbar } from './components/Nav/Nav'
+import { Avatar } from '@/app/components/Avatar'
 
 export default function Home (): JSX.Element {
-  const data = [
-    {
-      "id": 1,
-      "name": "Juan Pérez",
-      "age": 28,
-      "email": "juan.perez@example.com"
-    },
-    {
-      "id": 2,
-      "name": "Ana García",
-      "age": 34,
-      "email": "ana.garcia@example.com"
-    },
-    {
-      "id": 3,
-      "name": "Carlos López",
-      "age": 25,
-      "email": "carlos.lopez@example.com"
-    },
-    {
-      "id": 4,
-      "name": "Lucía Fernández",
-      "age": 30,
-      "email": "lucia.fernandez@example.com"
-    }
-  ]
+
 
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24 bg-[#ffffff]'>
-      <h1>Alert</h1>
-      <Alert subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit' title='Hey you gave a notification'></Alert>
-      <Alert variant="error" subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit' title='Hey you gave a notification'></Alert>
-      <Alert variant="success" subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit' title='Hey you gave a notification'></Alert>
+    <>
+      <section className="bg-gradient-to-r from-secondary-900 to-secondary-600 text-black pb-20 ">
+      <Navbar></Navbar>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
+            <div className="w-full ">
+              <h1 className="text-4xl font-bold mb-4 text-white">Welcome to MiC-componets</h1>
+              <div className='flex'>
+                <div className="w-11/12">
+                  <p className="text-xl mb-8 text-white">Another catalog components</p>
+                  <p className="text-xl mb-8 text-white">Only for learn testing and improve my skills.</p>
+                </div>
+                <div className="w-1/12 flex justify-center items-center">
+                  <Avatar src='https://zlinyan.es/_astro/me.C7wE-_Fh_1HxhPl.webp' />
+                </div>
+              </div>
 
-      <h1>Avatar</h1>
-      <Avatar src='https://zlinyan.es/_astro/me.C7wE-_Fh_1HxhPl.webp' />
-      <h1>Autocomplete</h1>
-      <Autocomplete
-        id='autocomplete'
-        label='Autocomplete example'
-        listName='datalist'
-        options={[
-          "spain",
-          "china",
-          "canary islands",
-          "portugal",
-          "usa"
-        ]}
-      />
-
-      <h1>Color Picker</h1>
-      <ColorPicker id='color-picker'>Ejemplo de Color Picker</ColorPicker>
-      <h1>Separator</h1>
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus sit, aperiam modi deleniti sunt a exercitationem eaque quaerat laudantium error quam
-        <Separator />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium iste tempore quidem ipsum veniam fugiat eum provident corrupti sapiente dolore
-      </div>
-
-      <div className='flex'>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus sit, aperiam modi deleniti sunt a exercitationem eaque quaerat laudantium error quam
-        <Separator orientation='vertical' />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium iste tempore quidem ipsum veniam fugiat eum provident corrupti sapiente dolore
-      </div>
-
-      <h1>Links</h1>
-      <Link href='#'>Enlace</Link>
-
-      <h1>Inputs</h1>
-      <div>
-        <Input id='input'>Label</Input>
-      </div>
-      <div className='flex items-center'>
-        <Check id='check'>Label for check</Check>
-      </div>
-      <div>
-        <Textarea id='textarea'>Label for textarea</Textarea>
-      </div>
-      <h1>Progress Bar</h1>
-      <div className='w-full'>
-        <Progress max={100} value={25} min={0} status='error' />
-        <Progress max={100} value={50} min={0} status='warning' />
-        <Progress max={100} value={75} min={0} status='warning' />
-        <Progress max={100} value={100} min={0} status='success' />
-      </div>
-
-      <ScrollArea className='flex flex-col w-1/2 max-h-24 overflow-auto '>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nam animi facere at! Accusamus blanditiis unde veniam assumenda ut deleniti dolorum velit. Iure pariatur perferendis ullam quidem, neque soluta rerum!
-      </ScrollArea>
-      
-      <h1>Select</h1>
-      <Select name="" id="select" label='example'>
-        <SelectOption value="1">1</SelectOption>
-        <SelectOption value="2">2</SelectOption>
-        <SelectOption value="3">3</SelectOption>
-      </Select>
-      <h1>Slider</h1>
-      <Slider />
-
-      <h1>Snippet</h1>
-      <Snippet>npm i @chinese/button</Snippet>
-      
-      <h1>Float Button</h1>
-      <FloatButton>
-        <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-          <path stroke="#ffffff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 10.5h.01m-4.01 0h.01M8 10.5h.01M5 5h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-6.6a1 1 0 0 0-.69.275l-2.866 2.723A.5.5 0 0 1 8 18.635V17a1 1 0 0 0-1-1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/>
-        </svg>
-      </FloatButton>
-
-      <Tooltip id='tooltip' aria-labelledby='notification-label' label='label'>
-        <Button>
-          button with Tooltip
-        </Button>
-      </Tooltip>
-
-      <Table data-testid = "table">
-            <TableHead
-                data-testid = "t-head"
-                each={Object.keys(data[0])}
-                render={(item,index) => {
-                    return <th 
-                      key={index}
-                      scope="col" className="px-6 py-3"
-                    >{item}</th>
-                }}
-            />
-            <TableBody
-                data-testid = "t-body"
-                each={data}
-                row={(item,index) => {
-                    return <tr key={index}
-                      className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
-                    >
-                      {
-                        Object.values(item as {id:any,name:any,age:any,email:any} ).map((v,i) => {
-                          return <td className="px-6 py-4" key={i}>
-                              {v}
-                            </td>
-                        })
-                      }
-                    </tr>
-                }}
-            />
-        </Table>
-        <h1>Pagination</h1>
-        <div className='w-1/3'>
-          <Pagination
-            prevHref='#'
-            nextHref='#'
-          >
-              <Link href="#" variant='ghost'>1</Link>
-              <Link href="#" variant='ghost' active={true}>2</Link>
-              <Link href="#" variant='ghost'>3</Link>
-              <Link href="#" variant='ghost'>4</Link>
-          </Pagination>
+              <div className="flex space-x-4">
+                <Link 
+                  href='/pages/intro'
+                  className='border px-4 py-2 rounded border-white text-white'>
+                  Components
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="bg-muted py-16">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold mb-8 text-center">
+              <span className='bg-gradient-to-r from-primary-300 to-success-300 bg-clip-text text-transparent pr-2'>
+                [WIP]
+              </span>
+               more Components and variants
+            </h2>
+          </div>
+        </section>
+        <footer className="bg-primary text-primary-foreground py-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="mb-4 md:mb-0">
+              <p>&copy; 2024 Zixiong Lin Yang. All rights reserved.</p>
+            </div>
+            <div className="flex space-x-4">
+              <Link href="#" className="hover:underline">
+                Privacy Policy
+              </Link>
+              <Link href="#" className="hover:underline">
+                Terms of Service
+              </Link>
+            </div>
+          </div>
         </div>
-        <Switch />
-    </main>
+      </footer>
+    </>
+
   )
 }

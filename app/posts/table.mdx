@@ -1,0 +1,52 @@
+# Table
+      <Table data-testid = "table">
+            <TableHead
+                data-testid = "t-head"
+                each={["id", "name", "age", "email"]}
+                render={(item,index) => {
+                    return <th 
+                      key={index}
+                      scope="col" className="px-6 py-3"
+                    >{item}</th>
+                }}
+            />
+            <TableBody
+                data-testid = "t-body"
+                each={[
+    {
+      "id": 1,
+      "name": "Juan Pérez",
+      "age": 28,
+      "email": "juan.perez@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Ana García",
+      "age": 34,
+      "email": "ana.garcia@example.com"
+    },
+    {
+      "id": 3,
+      "name": "Carlos López",
+      "age": 25,
+      "email": "carlos.lopez@example.com"
+    },
+    {
+      "id": 4,
+      "name": "Lucía Fernández",
+      "age": 30,
+      "email": "lucia.fernandez@example.com"
+    }
+  ]}
+                row={(item,index) => {
+                    return <tr key={index}
+                      className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                    >
+                        <td className="px-6 py-8">{item.id}</td>
+                        <td className="px-6 py-8">{item.name}</td>
+                        <td className="px-6 py-8">{item.age}</td>
+                        <td className="px-6 py-8">{item.email}</td>
+                    </tr>
+                }}
+            />
+        </Table>
