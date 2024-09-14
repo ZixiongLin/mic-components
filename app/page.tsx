@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Navbar } from './components/Nav/Nav'
+import { Navbar } from './ui/Nav/Nav'
 import { Avatar } from '@/app/components/Avatar'
 
 export default function Home (): JSX.Element {
