@@ -29,7 +29,7 @@ export const Snippet = ({children,...props}:{
 
     return <div className="flex justify-center items-center px-2 rounded-md bg-neutrals-100">
             <pre {...props} >
-                <code className="before:content-[$]">
+                <code className="before:content-['$']">
                 {children}
                 </code>
             </pre>
