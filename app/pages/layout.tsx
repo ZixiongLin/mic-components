@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
-import { SideMenu } from '../components/SideMenu/SideMenu'
-import { Navbar } from '../components/Nav/Nav'
+import { SideMenu } from '../ui/SideMenu'
+import { Navbar } from '../ui/Nav'
 
 const Layout = ({ children }: { children: ReactNode }): JSX.Element => {
   return (

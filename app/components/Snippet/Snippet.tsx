@@ -28,7 +28,11 @@ export const Snippet = ({children,...props}:{
     }
 
     return <div className="flex justify-center items-center px-2 rounded-md bg-neutrals-100">
-            <p {...props} >$ {children}</p>
+            <pre {...props} >
+                <code className="before:content-['$']">
+                {children}
+                </code>
+            </pre>
             <Button role="copy-button" onClick={ () =>{copy()}} size="xs" variant="light">
             {
                 copied ? <Check/> : <Copy/>

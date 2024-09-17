@@ -8,11 +8,15 @@ describe("Snippet", () => {
         expect(screen.getByTestId("snippet")).not.toBeNull()
     })
 
-    it("have children (only text)", () => {
+    it("have children <code> tag", () => {
         render(<Snippet data-testid="snippet">Copy Text</Snippet>)
-        expect(screen.getByTestId("snippet").innerHTML).toEqual("$ Copy Text")
+        expect(screen.getByTestId("snippet").getElementsByTagName("code")).not.toBeNull()
     })
 
+    it("have snippet", () => {
+        render(<Snippet data-testid="snippet">Copy Text</Snippet>)
+        expect(screen.getByText("Copy Text")).not.toBeNull()
+    })
     it("have copy button", () => {
         render(<Snippet data-testid="snippet">Copy Text</Snippet>)
         expect(screen.getByRole("copy-button")).not.toBeNull()

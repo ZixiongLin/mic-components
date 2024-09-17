@@ -1,6 +1,6 @@
-import { ScrollArea } from '../ScrollArea'
-import { Badge } from '../Badge'
-import { Link } from '../Link'
+import { ScrollArea } from '../../components/ScrollArea'
+import { Badge } from '../../components/Badge'
+import { Link } from '../../components/Link'
 
 export const SideMenu = ({ ...props }): JSX.Element => {
   return (
