@@ -14,7 +14,7 @@ export const Autocomplete = ({
     return <div {...props} className="flex gap-2 items-center">
         <label htmlFor={id} className="font-bold text-sm cursor-pointer">{label}</label>
         <input type="text" id={id}
-            className="px-4 py-2 border rounded-md"
+            className="px-4 py-2 border rounded-md dark:text-neutrals-1000"
             placeholder="search one"
             autoComplete="off"
             list={listName}

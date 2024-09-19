@@ -15,9 +15,11 @@ export const Tooltip =({
         <div role="tooltip" id={id} {...props} 
             className={
                 isHover ? 
-                    'inline absolute px-2 py-1 rounded-md -mt-8 shadow-md bg-white animate-animation-opacity': 
+                    'flex absolute px-2 py-1 rounded-md -mt-10 shadow-md bg-white animate-animation-opacity dark:text-neutrals-100 dark:bg-secondary-900 tooltip z-10 object-center flex-col justify-center items-center': 
                     'hidden'}>
             {label}
+            <div className="w-0 h-0 border-l-[12px] border-t-[12px] border-r-[12px] border-l-transparent dark:border-t-secondary-900 border-r-transparent absolute mt-auto -bottom-[12px]">
+            </div>        
         </div>
         <div 
             onMouseEnter={ () => setIsHover(true)}

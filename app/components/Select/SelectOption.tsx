@@ -6,7 +6,7 @@ export const SelectOption =({
     ...props
 }:SelectOptionProps) => {
     return <option value={value}
-        className="cursor-pointer"
+        className="cursor-pointer dark:text-neutrals-1000"
         {...props}
     >
         {children}
