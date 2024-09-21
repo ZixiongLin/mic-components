@@ -8,7 +8,7 @@ export const TableBody =<T,>({
     row: <T>(item:T,index?:number) => ReactNode,
     each:T[]
 }) => {
-    return <tbody {...props}>
+    return <tbody className="dark:text-neutrals-1000" {...props}>
         {
             Children.toArray(each.map((item,index) => row(item,index)))
         }

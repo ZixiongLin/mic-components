@@ -21,6 +21,7 @@ import { Switch } from '@/app/components/Switch'
 import { Table, TableBody, TableHead } from '@/app/components/Table'
 import { Textarea } from '@/app/components/Textarea'
 import { Tooltip } from '@/app/components/Tooltip/Tooltip'
+import * as Typographic from '@/app/components/Typography'
 
 export function useMDXComponents (): MDXComponents {
   return {
@@ -47,6 +48,7 @@ export function useMDXComponents (): MDXComponents {
     Switch,
     Table, TableBody, TableHead,
     Textarea,
-    Tooltip
+    Tooltip,
+    ...Typographic
   }
 }
