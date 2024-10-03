@@ -4,7 +4,7 @@ import { Navbar } from '../ui/Nav'
 
 const Layout = ({ children }: { children: ReactNode }): JSX.Element => {
   return (
-      <div className='bg-white dark:bg-secondary-1000'>
+      <div className='bg-white dark:bg-secondary-900'>
         <Navbar></Navbar>
         <div className="flex w-full">
           <div className='w-1/5'>
