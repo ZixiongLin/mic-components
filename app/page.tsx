@@ -8,7 +8,7 @@ export default function Home (): JSX.Element {
 
   return (
     <>
-      <section className="bg-gradient-to-r from-secondary-900 to-secondary-600 text-black pb-20 ">
+      <section className="bg-secondary-900 text-black pb-20 ">
         <Navbar></Navbar>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="w-full ">
@@ -48,15 +48,9 @@ export default function Home (): JSX.Element {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="mb-4 md:mb-0">
-                <p>&copy; 2024 Zixiong Lin Yang. All rights reserved.</p>
+                <p>&copy; 2024 Zixiong Lin Yang.</p>
               </div>
               <div className="flex space-x-4">
-                <Link href="#" className="hover:underline">
-                  Privacy Policy
-                </Link>
-                <Link href="#" className="hover:underline">
-                  Terms of Service
-                </Link>
               </div>
             </div>
           </div>

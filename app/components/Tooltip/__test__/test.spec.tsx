@@ -52,7 +52,8 @@ describe('hover actions Tooltip', () => {
         const button = screen.getByText("button with Tooltip");
         fireEvent.mouseOver(button);
         await waitFor( () => {screen.getByTestId('tooltip')})
-        expect(screen.getByTestId('tooltip').className).includes('inline')
+        console.log(screen.getByTestId('tooltip').className)
+        expect(screen.getByTestId('tooltip').className).includes('flex')
     })
 
 

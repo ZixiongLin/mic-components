@@ -10,13 +10,13 @@ export const SideMenu = ({ ...props }): JSX.Element => {
           Components
         </h1>
         <Link href='/pages/alert'>
-          Alert <Badge variant='success'>new</Badge>
+          Alert
         </Link>
         <Link href='/pages/autocomplete'>
-          Autocomplete <Badge variant='success'>new</Badge>
+          Autocomplete
         </Link>
         <Link href='/pages/avatar'>
-          Avatar <Badge variant='success'>new</Badge>
+          Avatar
         </Link>
         <Link href='/pages/badge'>
           Badge
@@ -25,55 +25,58 @@ export const SideMenu = ({ ...props }): JSX.Element => {
           Button
         </Link>
         <Link href='/pages/check'>
-          Check <Badge variant='success'>new</Badge>
+          Check
         </Link>
         <Link href='/pages/color-picker'>
-          Color Picker <Badge variant='success'>new</Badge>
+          Color Picker
         </Link>
         <Link href='/pages/float-button'>
-          Float Button <Badge variant='success'>new</Badge>
+          Float Button
         </Link>
         <Link href='/pages/input'>
-          Input <Badge variant='progress'> Updated</Badge>
+          Input
         </Link>
         <Link href='/pages/link'>
-          Link <Badge variant='progress'> Updated</Badge>
+          Link
         </Link>
         <Link href='/pages/pagination'>
-          Pagination <Badge variant='success'>new</Badge>
+          Pagination
         </Link>
         <Link href='/pages/pill'>
           Pill
         </Link>
         <Link href='/pages/progress'>
-          Progress <Badge variant='progress'> Updated</Badge>
+          Progress
         </Link>
         <Link href='/pages/scroll-area'>
-          Scroll Area <Badge variant='success'> new</Badge>
+          Scroll Area
         </Link>
         <Link href='/pages/select'>
-          Select <Badge variant='success'> new</Badge>
+          Select
         </Link>
         <Link href='/pages/separator'>
-          Separator <Badge variant='success'>New</Badge>
+          Separator
         </Link>
         <Link href='/pages/slider'>
-          Slider <Badge variant='success'>new</Badge>
+          Slider
         </Link>
         <Link href='/pages/snippet'>
-          Snippet <Badge variant='success'>new</Badge>
+          Snippet
         </Link>
         <Link href='/pages/switch'>
-          Switch <Badge variant='success'>new</Badge>
+          Switch
         </Link>
         <Link href='/pages/table'>
-          Table <Badge variant='success'>new</Badge>
+          Table
         </Link>
         <Link href='/pages/text-area'>
-          Text Area <Badge variant='progress'>Updated</Badge>
+          Text Area
         </Link>
         <Link href='/pages/tooltip'>
-          ToolTip <Badge variant='progress'>new</Badge>
+          ToolTip
+        </Link>
+        <Link href='/pages/typography'>
+          Typography <Badge variant='success'>new</Badge>
         </Link>
       </aside>
     </ScrollArea>
